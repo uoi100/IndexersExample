@@ -11,14 +11,20 @@ namespace Part02_StringIndexers
         static void Main(string[] args)
         {
             Foo foo = new Foo();
-            foo["A"] = 123;
-            foo["B"] = 321.123122;
-            foo["W"] = "Hello World!";
-            foo["Z"] = 123.11m;
+            foo["Q"] = 123;
+            foo["W"] = 321.123122;
+            foo["O"] = "Hello World!";
+            foo["P"] = 123.11m;
 
             for (int i = 0; i <= foo.Length; i++)
                 Console.WriteLine(foo.get(i));
-            
+
+            Console.WriteLine("");
+
+            Console.WriteLine(foo["W"]);
+            Console.WriteLine(foo["O"]);
+            Console.WriteLine(foo["P"]);
+            Console.WriteLine(foo["Z"]);
 
             Console.Read();
         }

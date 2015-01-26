@@ -38,7 +38,7 @@ namespace Part02_StringIndexers
                     }
                 }
                 error = true;
-                return 0;
+                return "Invalid Key";
             }
             set
             {
