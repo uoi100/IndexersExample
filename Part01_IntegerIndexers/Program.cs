@@ -10,16 +10,18 @@ namespace Part01_IntegerIndexers
     {
         static void Main(string[] args)
         {
-            Foo foo = new Foo();
+            Foo foo = new Foo(10); // Declare foo with a size of 10
+             
+            // From 0 to 10 inclusively, assign foo[index] to index.
+            // Notice that '<=' does not crash the program.
+            // This is thanks to the Fail-Soft Array that was setup.
+            for (int i = 0; i <= 10; i++)
+                foo[i] = i;
 
-            foo[0] = 21;
+            // From 0 to 30 inclusively, print the values in foo[index].
+            for (int i = 0; i <= 30; i++)
+                Console.Write(foo[i] + " ");
 
-            foo[51] = 11;
-
-            // This will not throw an exception because of the indexer's fail-soft array
-            Console.WriteLine(foo[0]);
-            Console.WriteLine(foo[51]);
-            Console.WriteLine(foo[53]);
             Console.Read();
         }
     }
